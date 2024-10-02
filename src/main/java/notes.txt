@@ -1,0 +1,13 @@
+A Program to demonstrate the use of @RequestBody annotation:
+Programs:
+* AppConfig.java
+* AppInit.java
+* ApplicationController.java
+* Product.java
+Notes:
+* The @RequestBody annotation is used to extract request body from web request and bind them to method arguments.
+* This annotation can is used at parameter level.
+* The body of the request is passed through the HttpMessageConverter to convert the body into the method argument type.
+* The @RequestBody annotation can accept one attribute, that is required.
+* The required attribute default value is true, this is to make request body as mandatory and non-mandatory.
+* If the required attribute is true but that request didn't have request body then that request gives '400 - Bad Request'.
