@@ -20,57 +20,89 @@ public class ApplicationController {
 	
 	@PostMapping(path = "/postObject")
 	public ResponseEntity<Object> postObject(@RequestBody Object object){
-		ResponseEntity<Object> responseEntity = new ResponseEntity<Object>(object, HttpStatus.OK);
-		
+		ResponseEntity<Object> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Object>(object, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Object>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postProduct")
 	public ResponseEntity<Product> postProduct(@RequestBody Product product){
-		ResponseEntity<Product> responseEntity = new ResponseEntity<Product>(product, HttpStatus.OK);
-		
+		ResponseEntity<Product> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Product>(product, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Product>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postData")
 	public ResponseEntity<Map<String, Object>> postData(@RequestBody Map<String, Object> data){
-		ResponseEntity<Map<String, Object>> responseEntity = new ResponseEntity<Map<String,Object>>(data, HttpStatus.OK);
-		
+		ResponseEntity<Map<String, Object>> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Map<String,Object>>(data, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Map<String,Object>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postList")
 	public ResponseEntity<List<Object>> postList(@RequestBody List<Object> list){
-		ResponseEntity<List<Object>> responseEntity = new ResponseEntity<List<Object>>(list, HttpStatus.OK);
-		
+		ResponseEntity<List<Object>> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<List<Object>>(list, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<List<Object>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postSet")
 	public ResponseEntity<Set<Object>> postSet(@RequestBody Set<Object> set){
-		ResponseEntity<Set<Object>> responseEntity = new ResponseEntity<Set<Object>>(set, HttpStatus.OK);
-		
+		ResponseEntity<Set<Object>> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Set<Object>>(set, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Set<Object>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postMessage")
 	public ResponseEntity<String> postMessage(@RequestBody String message){
-		ResponseEntity<String> responseEntity = new ResponseEntity<String>(message, HttpStatus.OK);
-		
+		ResponseEntity<String> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<String>(message, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postProperties")
 	public ResponseEntity<Properties> postProperties(@RequestBody Properties properties){
-		ResponseEntity<Properties> responseEntity = new ResponseEntity<Properties>(properties, HttpStatus.OK);
-		
+		ResponseEntity<Properties> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Properties>(properties, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Properties>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
 	@PostMapping(path = "/postDataOptional")
 	public ResponseEntity<Map<String, Object>> postDataOptional(@RequestBody(required = false) Map<String, Object> data){
-		ResponseEntity<Map<String, Object>> responseEntity = new ResponseEntity<Map<String,Object>>(data, HttpStatus.OK);
-		
+		ResponseEntity<Map<String, Object>> responseEntity = null;
+		try {
+			responseEntity = new ResponseEntity<Map<String,Object>>(data, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<Map<String,Object>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		return responseEntity;
 	}
 	
